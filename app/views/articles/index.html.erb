@@ -1,0 +1,16 @@
+
+
+<div class="container">
+
+  <% @articles.each do |article| %>
+    <div class="row">
+      <%= link_to article.title, article_path(article) %>
+      <%= article.content %>
+     <% end %>
+  </div>
+
+  <div class="banner">
+  <%= link_to "new article", new_article_path %>
+  </div>
+</div>
+
